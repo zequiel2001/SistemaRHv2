@@ -28,6 +28,16 @@ public class CadastroLogin extends javax.swing.JFrame {
         senha.setBorder(BorderFactory.createCompoundBorder(
         senha.getBorder(), 
         BorderFactory.createEmptyBorder(5, 5, 5, 5)));  
+        
+        usuario1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(105,105,105), 3, true));
+        usuario1.setBorder(BorderFactory.createCompoundBorder(
+        usuario1.getBorder(), 
+        BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+        
+        senha1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(105,105,105), 3, true));
+        senha1.setBorder(BorderFactory.createCompoundBorder(
+        senha1.getBorder(), 
+        BorderFactory.createEmptyBorder(5, 5, 5, 5))); 
     }
     
 
@@ -54,6 +64,7 @@ public class CadastroLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -69,7 +80,7 @@ public class CadastroLogin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 120, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
@@ -90,7 +101,7 @@ public class CadastroLogin extends javax.swing.JFrame {
         getContentPane().add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 220, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lodotech1.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 220, 120));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 220, 120));
 
         usuario1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,11 +142,23 @@ public class CadastroLogin extends javax.swing.JFrame {
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sair2.png"))); // NOI18N
         jMenu1.setText("Leave");
+        jMenu1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
             }
         });
+
+        jMenuItem1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sair2.png"))); // NOI18N
+        jMenuItem1.setText("Leave");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -180,6 +203,20 @@ public class CadastroLogin extends javax.swing.JFrame {
     private void usuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuario1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usuario1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        
+        //sair
+        
+                int options = JOptionPane.YES_NO_OPTION;
+        int result = JOptionPane.showConfirmDialog(null, "Do you really want to go out" ,"IMPORTANT", options, 3);
+        if (result == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        } else if (result == JOptionPane.NO_OPTION) {
+            JOptionPane.showMessageDialog(null, "OK Good Use!");
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,6 +264,7 @@ public class CadastroLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField senha;
     private javax.swing.JPasswordField senha1;

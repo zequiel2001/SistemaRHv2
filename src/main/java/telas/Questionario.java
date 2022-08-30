@@ -20,22 +20,22 @@ public class Questionario extends javax.swing.JInternalFrame {
      */
     public Questionario() {
         initComponents();
-        pergunta1.setText("Por que você deseja trabalhar aqui?");
+        pergunta1.setText("What is your career goal?");
         pergunta1.setOpaque(false);
         pergunta1.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
-        pergunta2.setText("Qual é o seu objetivo de carreira?");
+        pergunta2.setText("Could you tell me about yourself and describe your background briefly?");
         pergunta2.setOpaque(false);
         pergunta2.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
-        pergunta3.setText("Como é seu horário de trabalho?");
+        pergunta3.setText("Tell me about your professional experiences (if you have any).");
         pergunta3.setOpaque(false);
         pergunta3.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
-        pergunta4.setText("Como foi sua escolha profissional?");
+        pergunta4.setText("What are your working hours?");
         pergunta4.setOpaque(false);
         pergunta4.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
-        pergunta5.setText("Quais são as melhores qualidades do seu estilo de escrita?");
+        pergunta5.setText("Why did you choose this job/career?");
         pergunta5.setOpaque(false);
         pergunta5.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
-        pergunta6.setText("Quais as dificuldades encontradas no início da carreira?");
+        pergunta6.setText("What are your writing skills? ");
         pergunta6.setOpaque(false);
         pergunta6.setFont(new Font("Segoe UI Back", Font.PLAIN, 17));
         
@@ -144,7 +144,7 @@ public class Questionario extends javax.swing.JInternalFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel6.setText("Response:");
+        jLabel6.setText("Answer:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -163,7 +163,7 @@ public class Questionario extends javax.swing.JInternalFrame {
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("Response:");
+        jLabel8.setText("Answer:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -186,7 +186,7 @@ public class Questionario extends javax.swing.JInternalFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Response:");
+        jLabel10.setText("Answer:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -209,7 +209,7 @@ public class Questionario extends javax.swing.JInternalFrame {
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("Response:");
+        jLabel12.setText("Answer:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -232,7 +232,7 @@ public class Questionario extends javax.swing.JInternalFrame {
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel14.setText("Response:");
+        jLabel14.setText("Answer:");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
 
         jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
