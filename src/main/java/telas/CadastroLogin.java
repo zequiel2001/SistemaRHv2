@@ -46,6 +46,10 @@ public class CadastroLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         senha = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
+        usuario1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        senha1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -65,7 +69,7 @@ public class CadastroLogin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 120, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
@@ -88,8 +92,26 @@ public class CadastroLogin extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lodotech1.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 220, 120));
 
+        usuario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuario1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 220, 30));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel6.setText("CPF:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 80, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("Nome: ");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 100, 20));
+        getContentPane().add(senha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 220, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background3.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 330));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 460));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,6 +177,10 @@ public class CadastroLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenu1ActionPerformed
 
+    private void usuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuario1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuario1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,10 +223,14 @@ public class CadastroLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField senha;
+    private javax.swing.JPasswordField senha1;
     private javax.swing.JTextField usuario;
+    private javax.swing.JTextField usuario1;
     // End of variables declaration//GEN-END:variables
 }
