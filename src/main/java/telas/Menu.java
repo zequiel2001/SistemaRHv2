@@ -46,7 +46,7 @@ public class Menu extends javax.swing.JFrame {
         setTitle("RH TECH");
         setPreferredSize(new java.awt.Dimension(1366, 760));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundomenu.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu1.jpg"))); // NOI18N
 
         jDesktopPane2.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
