@@ -43,7 +43,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MenuPrincipal");
+        setTitle("RH TECH");
         setPreferredSize(new java.awt.Dimension(1366, 760));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fundomenu.png"))); // NOI18N

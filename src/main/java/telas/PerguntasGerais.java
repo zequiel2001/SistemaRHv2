@@ -7,6 +7,10 @@ package telas;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import modelos.Pergunta;
+import modelos.PerguntaBO;
 
 /**
  *
@@ -19,6 +23,11 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
      */
     public PerguntasGerais() {
         initComponents();
+        
+        DefaultTableModel modeltable = (DefaultTableModel) tabelaPergunta.getModel();
+        tabelaPergunta.setRowSorter(new TableRowSorter(modeltable));
+        preencherTabela();
+        
         
         /*jButton1.setFont(new Font("Ravie", 1, 18));
         jButton1.setForeground(new Color(60,60,60));
@@ -45,6 +54,20 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
        jButton3.setMargin(new Insets(2, 1000, 2, 14));
         */
     }
+    
+    public void preencherTabela(){
+        
+        DefaultTableModel modeltable = (DefaultTableModel) tabelaPergunta.getModel();
+         modeltable.setNumRows(0);
+         PerguntaBO perguntabo = new PerguntaBO();
+         
+         for (Pergunta p: perguntabo.consulta()){
+             modeltable.addRow(new Object[]{
+             p.getPergunta()
+             });
+         }
+             
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -59,9 +82,9 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        pergunta = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelaPergunta = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -86,13 +109,13 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
         jLabel4.setText("Question:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 110, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        pergunta.setColumns(20);
+        pergunta.setRows(5);
+        jScrollPane1.setViewportView(pergunta);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 500, 50));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaPergunta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -103,7 +126,12 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
                 "Question"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        tabelaPergunta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelaPerguntaMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tabelaPergunta);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 610, 130));
 
@@ -160,6 +188,15 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tabelaPerguntaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaPerguntaMouseClicked
+        // TODO add your handling code here:
+         int linha = this.tabelaPergunta.getSelectedRow();
+         String pergunta1 = tabelaPergunta.getModel().getValueAt(linha, 0).toString();
+         this.pergunta.setText(pergunta1);
+         
+        
+    }//GEN-LAST:event_tabelaPerguntaMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -173,7 +210,7 @@ public class PerguntasGerais extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea pergunta;
+    private javax.swing.JTable tabelaPergunta;
     // End of variables declaration//GEN-END:variables
 }

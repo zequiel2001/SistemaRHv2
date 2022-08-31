@@ -9,7 +9,39 @@ package modelos;
  * @author Ezeks
  */
 public class Cadidato {
-    private String nome, sobrenome, cpf, sexo, email, cursos,esperiecia;
+    private String nome, sobrenome, cpf, sexo, email, cursos,esperiecia, genero, niversario, telefone, endereco, cep , uf;
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getNiversario() {
+        return niversario;
+    }
+
+    public void setNiversario(String niversario) {
+        this.niversario = niversario;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
 
     public String getNome() {
         return nome;
@@ -67,13 +99,7 @@ public class Cadidato {
         this.esperiecia = esperiecia;
     }
 
-    public int getTelefone() {
-        return telefone;
-    }
 
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
 
     public int getIdade() {
         return idade;
@@ -82,8 +108,32 @@ public class Cadidato {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    private int telefone;
-    private int idade;
+    //private double telefone;
+    private int idade, numero;
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
     
     
 }

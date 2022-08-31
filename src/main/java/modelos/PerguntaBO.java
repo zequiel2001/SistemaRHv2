@@ -4,10 +4,20 @@
  */
 package modelos;
 
+import dao.PerguntaDAO;
+import java.util.List;
+
 /**
  *
  * @author Ezeks
  */
 public class PerguntaBO {
-    
+    public List<Pergunta> consulta(){
+        
+        PerguntaDAO perguntadao = new PerguntaDAO();
+        
+        List<Pergunta> pergunta = perguntadao.consulta();
+        
+        return pergunta;
+    }
 }
